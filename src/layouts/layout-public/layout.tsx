@@ -18,10 +18,7 @@ export function LayoutPublic() {
           flexDirection: 'column',
           padding: '20px',
           overflow: 'auto',
-        },
-        tablet: {
-          padding: '10px',
-          alignItems: 'center',
+          gap: '20px',
         },
       }}
     >
@@ -53,22 +50,13 @@ export function LayoutPublic() {
       <Stack
         sx={{
           default: {
-            width: '400px',
+            width: '100%',
             flexDirection: 'column',
             gap: '45px',
             alignItems: 'stretch',
-            justifyContent: 'center',
+            justifyContent: 'flex-start',
             flexGrow: 1,
             maxWidth: '-webkit-fill-available',
-            paddingBottom: '38px',
-          },
-          tablet: {
-            width: '560px',
-            justifyContent: 'flex-start',
-          },
-          mobile: {
-            width: '100%',
-            paddingBottom: '0px',
           },
         }}
       >
