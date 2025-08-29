@@ -1,6 +1,5 @@
 {
   "name": "nanagency-hometask",
-  "private": true,
   "version": "1.0.3",
   "homepage": "https://cyrilstrone.github.io/nanagency-hometask/",
   "type": "module",
