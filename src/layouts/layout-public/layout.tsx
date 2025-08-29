@@ -16,8 +16,7 @@ export function LayoutPublic() {
         default: {
           flexGrow: 1,
           flexDirection: 'column',
-          padding: '20px',
-          overflow: 'auto',
+          overflow: 'hidden',
           gap: '20px',
         },
       }}
@@ -50,6 +49,7 @@ export function LayoutPublic() {
       <Stack
         sx={{
           default: {
+            paddingTop: '60px',
             width: '100%',
             flexDirection: 'column',
             gap: '45px',

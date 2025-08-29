@@ -1,10 +1,13 @@
-import { Image } from '@jenesei-software/jenesei-kit-react/component-image';
-import { Stack, StackMotion } from '@jenesei-software/jenesei-kit-react/component-stack';
-import { Typography, TypographyLink } from '@jenesei-software/jenesei-kit-react/component-typography';
+import { HomeMainDto } from '@local/core/dto';
 
-export function PagePublicHomeMainSecond() {
+import { Image } from '@jenesei-software/jenesei-kit-react/component-image';
+import { Stack } from '@jenesei-software/jenesei-kit-react/component-stack';
+import { Typography, TypographyLink } from '@jenesei-software/jenesei-kit-react/component-typography';
+import { FC } from 'react';
+
+export const PagePublicHomeMainSecond: FC<HomeMainDto['second']> = (props) => {
   return (
-    <StackMotion
+    <Stack
       sx={{
         default: {
           width: '260px',
@@ -50,8 +53,8 @@ export function PagePublicHomeMainSecond() {
             objectPosition: 'center top',
           },
         }}
-        alt='Home second'
-        src='/images/home-second.png'
+        alt={props.imageAlt ?? 'Second Image'}
+        src={props.image}
       />
       <Typography
         sx={{
@@ -65,7 +68,7 @@ export function PagePublicHomeMainSecond() {
           },
         }}
       >
-        А также:
+        {props.subTitle}
       </Typography>
       <Typography
         sxStandard={{
@@ -89,7 +92,7 @@ export function PagePublicHomeMainSecond() {
           },
         }}
       >
-        Выставка тыкв
+        {props.title}
       </Typography>
       <Typography
         sxStandard={{
@@ -111,10 +114,10 @@ export function PagePublicHomeMainSecond() {
           },
         }}
       >
-        Местные фермеры покажут свои самые большие тыквы. Посоревнуются чья тыква тяжелее и крепче.
+        {props.description}
       </Typography>
       <TypographyLink
-        to='/pu/home'
+        to={props.link}
         sxStandard={(theme) => ({
           default: {
             textDecoration: 'none',
@@ -143,7 +146,7 @@ export function PagePublicHomeMainSecond() {
           },
         }}
       >
-        ЕЩЕ О ВЫСТАВКЕ
+        {props.button}
       </TypographyLink>
       <Stack
         sx={{
@@ -162,6 +165,6 @@ export function PagePublicHomeMainSecond() {
           },
         }}
       />
-    </StackMotion>
+    </Stack>
   );
-}
+};

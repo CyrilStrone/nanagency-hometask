@@ -1,23 +1,17 @@
-import { StackMotionLink } from '@local/components/stack-link';
+import { StackLink } from '@local/components/stack-link';
+import { HomeMainDto } from '@local/core/dto';
 
 import { Image } from '@jenesei-software/jenesei-kit-react/component-image';
-import { Stack, StackMotion } from '@jenesei-software/jenesei-kit-react/component-stack';
+import { Stack } from '@jenesei-software/jenesei-kit-react/component-stack';
 import { Typography } from '@jenesei-software/jenesei-kit-react/component-typography';
-import { useScreenWidth } from '@jenesei-software/jenesei-kit-react/context-screen-width';
+import { FC } from 'react';
 
-export function PagePublicHomeMainFirst() {
-  const { screenActual } = useScreenWidth();
-  const isMobile = screenActual === 'mobile';
+export const PagePublicHomeMainFirst: FC<HomeMainDto['first']> = (props) => {
   return (
-    <StackMotion
-      animate={{
-        background: isMobile
-          ? 'linear-gradient(180deg, #AEB595 0%, rgba(173, 180, 148, 0) 100%)'
-          : 'linear-gradient(180deg, rgba(173, 180, 148, 0) 29.5%, #AEB595 100%)',
-      }}
-      transition={{ duration: 0.5 }}
+    <Stack
       sx={{
         default: {
+          background: 'linear-gradient(180deg, rgba(173, 180, 148, 0) 29.5%, #AEB595 100%)',
           position: 'relative',
           flex: 1,
           flexShrink: 1,
@@ -29,6 +23,7 @@ export function PagePublicHomeMainFirst() {
           borderRadius: '10px',
         },
         mobile: {
+          background: 'linear-gradient(180deg, #AEB595 0%, rgba(173, 180, 148, 0) 100%)',
           justifyContent: 'flex-start',
           padding: '20px',
           borderRadius: '10px 10px 0px 0px',
@@ -60,8 +55,8 @@ export function PagePublicHomeMainFirst() {
             objectPosition: 'center bottom',
           },
         }}
-        alt='Home first'
-        src='/images/home-first.png'
+        alt={props.imageAlt || 'First Image'}
+        src={props.image}
       />
       <Typography
         sx={{
@@ -75,9 +70,9 @@ export function PagePublicHomeMainFirst() {
           },
         }}
       >
-        20-22 сентября
+        {props.subTitle}
       </Typography>
-      <StackMotionLink
+      <StackLink
         to='/pu/home'
         sx={{
           default: {
@@ -108,13 +103,12 @@ export function PagePublicHomeMainFirst() {
             },
           }}
         >
-          Фестиваль
-          <br></br>
-          фермеских товаров
+          {props.title}
         </Typography>
         <Image
           sxStack={() => ({
             default: {
+              minWidth: '62px',
               width: '62px',
               height: '30px',
               alignItems: 'center',
@@ -129,10 +123,10 @@ export function PagePublicHomeMainFirst() {
               objectPosition: 'center',
             },
           }}
-          alt='Home arrow'
+          alt='Arrow'
           src='/images/home-arrow.png'
         />
-      </StackMotionLink>
+      </StackLink>
       <Stack
         sx={{
           default: {
@@ -187,6 +181,6 @@ export function PagePublicHomeMainFirst() {
           },
         }}
       />
-    </StackMotion>
+    </Stack>
   );
-}
+};

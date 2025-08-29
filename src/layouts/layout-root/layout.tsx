@@ -1,3 +1,5 @@
+import { useInfo } from '@local/contexts/context-info';
+import { useLanguage } from '@local/contexts/context-language';
 import { ProviderValidation } from '@local/contexts/context-validation';
 import { LayoutRoutePrivate, LayoutRoutePublic } from '@local/core/router';
 import { useEnvironment } from '@local/hooks/use-environment';
@@ -40,9 +42,11 @@ const LayoutRootComponent = () => {
   // const isAuthenticated = useMemo(() => (isFetched ? isSuccess : undefined), [isFetched, isSuccess]);
 
   // const visible = useMemo(() => !!isLoading, [isLoading]);
+  const { isLoading: isLoadingInfo } = useInfo();
+
   const isAuthenticated = useMemo(() => false, []);
 
-  const visible = useMemo(() => true, []);
+  const visible = useMemo(() => !isLoadingInfo, [isLoadingInfo]);
   const navigate = useNavigate();
 
   const isMatchPrivate = useMatches({
@@ -85,7 +89,7 @@ const LayoutRootComponent = () => {
         defaultTitle={shortName}
         defaultDescription={t('meta.description')}
         isScrollOutlet={true}
-        defaultBgColor='whiteStandard'
+        defaultBgColor='grayJanice'
         defaultStatusBarColor='whiteStandard'
         // leftAside={{
         //   component: <LeftAside />,

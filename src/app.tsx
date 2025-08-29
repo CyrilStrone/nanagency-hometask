@@ -1,3 +1,4 @@
+import { ProviderInfo } from '@local/contexts/context-info';
 import { ProviderLanguage } from '@local/contexts/context-language';
 import { queryClient } from '@local/core/query';
 import { LayoutErrorBoundary } from '@local/layouts/layout-error';
@@ -16,18 +17,20 @@ function App() {
     <ThemeProvider theme={ThemeLight}>
       <ProviderScreenWidth>
         <ProviderLanguage>
-          <JeneseiGlobalStyles />
-          <LayoutErrorBoundary>
-            <QueryClientProvider client={queryClient}>
-              <ProviderPermission>
-                <ProviderGeolocation>
-                  <ProviderDialog zIndex={1000}>
-                    <LayoutRouter />
-                  </ProviderDialog>
-                </ProviderGeolocation>
-              </ProviderPermission>
-            </QueryClientProvider>
-          </LayoutErrorBoundary>
+          <ProviderInfo>
+            <JeneseiGlobalStyles />
+            <LayoutErrorBoundary>
+              <QueryClientProvider client={queryClient}>
+                <ProviderPermission>
+                  <ProviderGeolocation>
+                    <ProviderDialog zIndex={1000}>
+                      <LayoutRouter />
+                    </ProviderDialog>
+                  </ProviderGeolocation>
+                </ProviderPermission>
+              </QueryClientProvider>
+            </LayoutErrorBoundary>
+          </ProviderInfo>
         </ProviderLanguage>
       </ProviderScreenWidth>
     </ThemeProvider>
