@@ -16,7 +16,7 @@ export function LayoutPublic() {
         default: {
           flexGrow: 1,
           flexDirection: 'column',
-          overflow: 'hidden',
+          overflowX: 'hidden',
           gap: '20px',
         },
       }}
