@@ -35,6 +35,7 @@ export default defineConfig(({ mode }) => {
   const sizesBackgroundWhite = [];
   const sizesFavicon = [64];
   return {
+    base: mode === 'prod' ? '/nanagency-hometask/' : '/',
     server: {
       host: 'local.dev.jenesei.ru',
       port: 3000,
