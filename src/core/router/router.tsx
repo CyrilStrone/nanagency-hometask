@@ -27,7 +27,7 @@ export const LayoutRoutePrivate = createRoute({
   notFoundComponent: () => <Navigate to={PageRoutePrivateHome.fullPath} />,
   path: '/pr',
   beforeLoad: (props) => {
-    const isFirst = props.location.pathname === '/pr';
+    const isFirst = props.location.pathname === '/nanagency-hometask/pr';
     if (isFirst)
       throw redirect({
         to: '/pr/home',
@@ -41,7 +41,7 @@ export const LayoutRoutePublic = createRoute({
   notFoundComponent: () => <Navigate to={PageRoutePublicHome.fullPath} />,
   path: '/pu',
   beforeLoad: (props) => {
-    const isFirst = props.location.pathname === '/pu';
+    const isFirst = props.location.pathname === '/nanagency-hometask/pu';
     if (isFirst)
       throw redirect({
         to: '/pu/home',
@@ -75,6 +75,7 @@ export const router = createRouter({
   context: {
     queryClient: undefined!,
   },
+  basepath: '/nanagency-hometask/',
   defaultPreload: 'intent',
   defaultPreloadStaleTime: 0,
 });
