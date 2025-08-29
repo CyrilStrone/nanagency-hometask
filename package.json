@@ -1,7 +1,8 @@
 {
-  "name": "jenesei-template-project-react",
+  "name": "nanagency-hometask",
   "private": true,
   "version": "1.0.1",
+  "homepage": "https://cyrilstrone.github.io/nanagency-hometask",
   "type": "module",
   "scripts": {
     "start": "vite --mode dev",
