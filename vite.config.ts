@@ -19,15 +19,15 @@ export default defineConfig(({ mode }) => {
   const prefix = mode === 'prod' ? '/nanagency-hometask/' : '';
   const robotsMode = {
     prod: {
-      txt: `${prefix}robots/robots.prod.txt`,
+      txt: 'robots/robots.prod.txt',
       meta: 'noindex, nofollow',
     },
     dev: {
-      txt: `${prefix}robots/robots.dev.txt`,
+      txt: 'robots/robots.dev.txt',
       meta: 'index, nofollow',
     },
     test: {
-      txt: `${prefix}robots/robots.test.txt`,
+      txt: 'robots/robots.test.txt',
       meta: 'noindex, nofollow',
     },
   };
