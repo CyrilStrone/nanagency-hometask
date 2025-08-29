@@ -16,7 +16,7 @@ export const browserLng = navigator.language.split('-')[0];
 export type INameSpace = 'translation';
 
 export type IResources = typeof translation;
-const prefix = process.env.VITE_NODE_ENV === 'prod' ? '/nanagency-hometask/' : '/';
+const prefix = import.meta.env.VITE_NODE_ENV === 'prod' ? '/nanagency-hometask/' : '/';
 i18n
   .use(Backend)
   .use(LanguageDetector)
