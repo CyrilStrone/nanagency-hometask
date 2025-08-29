@@ -2,7 +2,7 @@
   "name": "nanagency-hometask",
   "private": true,
   "version": "1.0.2",
-  "homepage": "https://cyrilstrone.github.io/nanagency-hometask",
+  "homepage": "https://cyrilstrone.github.io/nanagency-hometask/",
   "type": "module",
   "scripts": {
     "start": "vite --mode dev",
