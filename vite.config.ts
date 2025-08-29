@@ -16,17 +16,18 @@ export default defineConfig(({ mode }) => {
   const VITE_DEFAULT_THEME_COLOR = env.VITE_DEFAULT_THEME_COLOR;
   const VITE_DEFAULT_DESCRIPTION = env.VITE_DEFAULT_DESCRIPTION;
 
+  const prefix = mode === 'prod' ? '/nanagency-hometask/' : '';
   const robotsMode = {
     prod: {
-      txt: 'robots/robots.prod.txt',
+      txt: `${prefix}robots/robots.prod.txt`,
       meta: 'noindex, nofollow',
     },
     dev: {
-      txt: 'robots/robots.dev.txt',
+      txt: `${prefix}robots/robots.dev.txt`,
       meta: 'index, nofollow',
     },
     test: {
-      txt: 'robots/robots.test.txt',
+      txt: `${prefix}robots/robots.test.txt`,
       meta: 'noindex, nofollow',
     },
   };
@@ -35,7 +36,7 @@ export default defineConfig(({ mode }) => {
   const sizesBackgroundWhite = [];
   const sizesFavicon = [64];
   return {
-    base: mode === 'prod' ? '/nanagency-hometask/' : '/',
+    base: prefix,
     server: {
       host: 'local.dev.jenesei.ru',
       port: 3000,
@@ -91,17 +92,16 @@ export default defineConfig(({ mode }) => {
           data: {
             title: VITE_DEFAULT_SHORTNAME,
             robotsMeta: robotsMode[mode]?.meta,
-            icon57: mode === 'prod' ? 'nanagency-hometask/icons/icon-57x57.ico' : `icons/icon-57x57.png`,
-            icon72: mode === 'prod' ? 'nanagency-hometask/icons/icon-72x72.ico' : `icons/icon-72x72.png`,
-            icon76: mode === 'prod' ? 'nanagency-hometask/icons/icon-76x76.ico' : `icons/icon-76x76.png`,
-            icon114: mode === 'prod' ? 'nanagency-hometask/icons/icon-114x114.ico' : `icons/icon-114x114.png`,
-            icon120: mode === 'prod' ? 'nanagency-hometask/icons/icon-120x120.ico' : `icons/icon-120x120.png`,
-            icon144: mode === 'prod' ? 'nanagency-hometask/icons/icon-144x144.ico' : `icons/icon-144x144.png`,
-            icon152: mode === 'prod' ? 'nanagency-hometask/icons/icon-152x152.ico' : `icons/icon-152x152.png`,
-            icon180: mode === 'prod' ? 'nanagency-hometask/icons/icon-180x180.ico' : `icons/icon-180x180.png`,
+            icon57: `${prefix}icons/icon-57x57.png`,
+            icon72: `${prefix}icons/icon-72x72.png`,
+            icon76: `${prefix}icons/icon-76x76.png`,
+            icon114: `${prefix}icons/icon-114x114.png`,
+            icon120: `${prefix}icons/icon-120x120.png`,
+            icon144: `${prefix}icons/icon-144x144.png`,
+            icon152: `${prefix}icons/icon-152x152.png`,
+            icon180: `${prefix}icons/icon-180x180.png`,
 
-            icon64Fav:
-              mode === 'prod' ? 'nanagency-hometask/icons/icon-64x64-favicon.ico' : 'icons/icon-64x64-favicon.ico',
+            icon64Fav: `${prefix}icons/icon-64x64-favicon.ico`,
           },
         },
       }),
@@ -125,7 +125,7 @@ export default defineConfig(({ mode }) => {
           theme_color: VITE_DEFAULT_THEME_COLOR,
           background_color: VITE_DEFAULT_THEME_COLOR,
           description: VITE_DEFAULT_DESCRIPTION,
-          start_url: mode === 'prod' ? '/nanagency-hometask/' : '/',
+          start_url: prefix,
           icons: generateManifestIcons({
             path: 'icons',
             prefix: 'icon',

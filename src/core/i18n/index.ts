@@ -16,7 +16,7 @@ export const browserLng = navigator.language.split('-')[0];
 export type INameSpace = 'translation';
 
 export type IResources = typeof translation;
-
+const prefix = process.env.NODE_ENV === 'prod' ? '/nanagency-hometask/' : '/';
 i18n
   .use(Backend)
   .use(LanguageDetector)
@@ -29,7 +29,7 @@ i18n
       backendOptions: [
         {
           prefix: 'i18next_res_',
-          loadPath: '/locales/{{lng}}/{{ns}}.json',
+          loadPath: `${prefix}locales/{{lng}}/{{ns}}.json`,
         },
       ],
     },
