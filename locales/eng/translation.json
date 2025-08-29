@@ -1,0 +1,48 @@
+{
+  "url": {
+    "title": {
+      "/pr/home": "Pr - Home",
+      "/pu/home": "Pu - Home"
+    }
+  },
+  "boundary": {
+    "title-1": "An unknown error occurred",
+    "title-2": "Please try again later",
+    "title-button": "Reload page",
+    "image": "No image"
+  },
+  "pages": {
+    "home": {
+      "main": {
+        "first": {
+          "subTitle": "September 20–22",
+          "title": "Farm Products Festival"
+        },
+        "second": {
+          "subTitle": "Also:",
+          "title": "Pumpkin Exhibition",
+          "description": "Local farmers will showcase their biggest pumpkins. They will compete to see whose pumpkin is heavier and stronger. Local farmers will showcase their biggest pumpkins. They will compete to see whose pumpkin is heavier and stronger.",
+          "button": "MORE ABOUT THE EXHIBITION"
+        }
+      },
+      "list": {
+        "title": "What's on the counter",
+        "list-item": {
+          "title": "Product name",
+          "price": "{{value}} {{currency}}"
+        }
+      }
+    }
+  },
+  "meta": {
+    "description": "eng, meta - description"
+  },
+  "sonner": {
+    "undo": "sonner - undo"
+  },
+  "form": {
+    "language": {
+      "placeholder": "Choose language"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+version: 1.0.11
+commit: f44aa5c
+date: 2025-08-29T11:06:25Z

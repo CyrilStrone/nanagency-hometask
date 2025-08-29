@@ -1,0 +1,48 @@
+{
+  "url": {
+    "title": {
+      "/pr/home": "Pr - Главная",
+      "/pu/home": "Pu - Главная"
+    }
+  },
+  "boundary": {
+    "title-1": "Произошла неизвестная ошибка",
+    "title-2": "Пожалуйста, попробуйте позже",
+    "title-button": "Перезагрузить страницу",
+    "image": "Нет изображения"
+  },
+  "pages": {
+    "home": {
+      "main": {
+        "first": {
+          "subTitle": "20-22 сентября",
+          "title": "Фестиваль фермерских товаров"
+        },
+        "second": {
+          "subTitle": "А также:",
+          "title": "Выставка тыкв",
+          "description": "Местные фермеры покажут свои самые большие тыквы. Посоревнуются чья тыква тяжелее и крепче.",
+          "button": "ЕЩЕ О ВЫСТАВКЕ"
+        }
+      },
+      "list": {
+        "title": "Что на прилавке",
+        "list-item": {
+          "title": "Название товара",
+          "price": "{{value}} {{currency}}"
+        }
+      }
+    }
+  },
+  "meta": {
+    "description": "rus, meta - description"
+  },
+  "sonner": {
+    "undo": "sonner - undo"
+  },
+  "form": {
+    "language": {
+      "placeholder": "Выберите язык"
+    }
+  }
+}
