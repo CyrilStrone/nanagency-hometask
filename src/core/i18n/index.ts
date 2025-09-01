@@ -1,3 +1,5 @@
+import { prefix } from '@local/consts';
+
 import { KeysLanguage } from '@jenesei-software/jenesei-kit-react/consts';
 import { ILanguageKeys } from '@jenesei-software/jenesei-kit-react/types';
 import i18n from 'i18next';
@@ -16,7 +18,6 @@ export const browserLng = navigator.language.split('-')[0];
 export type INameSpace = 'translation';
 
 export type IResources = typeof translation;
-const prefix = import.meta.env.VITE_NODE_ENV === 'prod' ? '/nanagency-hometask/' : '/';
 i18n
   .use(Backend)
   .use(LanguageDetector)

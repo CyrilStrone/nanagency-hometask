@@ -1,3 +1,4 @@
+import { prefix } from '@local/consts';
 import { HomeMainDto } from '@local/core/dto';
 
 import { Skeleton } from '@jenesei-software/jenesei-kit-react/area-skeleton';
@@ -20,7 +21,7 @@ export function PagePublicHome() {
           subTitle: tPagesHomeMain('first.subTitle'),
           title: tPagesHomeMain('first.title'),
           link: '/pu/home',
-          image: '/images/home-first.png',
+          image: `${prefix}images/home-first.png`,
         },
         second: {
           subTitle: tPagesHomeMain('second.subTitle'),
@@ -28,7 +29,7 @@ export function PagePublicHome() {
           description: tPagesHomeMain('second.description'),
           button: tPagesHomeMain('second.button'),
           link: '/pu/home',
-          image: '/images/home-second.png',
+          image: `${prefix}images/home-second.png`,
         },
       });
       setIsLoading(false);

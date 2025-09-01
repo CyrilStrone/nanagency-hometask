@@ -1,3 +1,4 @@
+import { prefix } from '@local/consts';
 import { LayoutErrorRouter } from '@local/layouts/layout-error';
 import { LayoutPrivate } from '@local/layouts/layout-private';
 import { LayoutPublic } from '@local/layouts/layout-public';
@@ -27,7 +28,7 @@ export const LayoutRoutePrivate = createRoute({
   notFoundComponent: () => <Navigate to={PageRoutePrivateHome.fullPath} />,
   path: '/pr',
   beforeLoad: (props) => {
-    const isFirst = props.location.pathname === '/nanagency-hometask/pr';
+    const isFirst = props.location.pathname === `${prefix}pr`;
     if (isFirst)
       throw redirect({
         to: '/pr/home',
@@ -41,7 +42,7 @@ export const LayoutRoutePublic = createRoute({
   notFoundComponent: () => <Navigate to={PageRoutePublicHome.fullPath} />,
   path: '/pu',
   beforeLoad: (props) => {
-    const isFirst = props.location.pathname === '/nanagency-hometask/pu';
+    const isFirst = props.location.pathname === `${prefix}pu`;
     if (isFirst)
       throw redirect({
         to: '/pu/home',
@@ -75,7 +76,7 @@ export const router = createRouter({
   context: {
     queryClient: undefined!,
   },
-  basepath: '/nanagency-hometask/',
+  basepath: prefix,
   defaultPreload: 'intent',
   defaultPreloadStaleTime: 0,
 });

@@ -1,3 +1,4 @@
+import { prefix } from '@local/consts';
 import { useInfo } from '@local/contexts/context-info';
 
 import { Scroll } from '@jenesei-software/jenesei-kit-react/area-scroll';
@@ -25,56 +26,56 @@ export function PagePublicHomeList() {
           {
             link: '/pu/home',
             id: '1',
-            image: '/imsages/home-first.png',
+            image: `${prefix}images/home-first.png`,
             title: tPagesHomeList('list-item.title'),
             price: tPagesHomeList('list-item.price', { value: 120, currency: currency }),
           },
           {
             link: '/pu/home',
             id: '2',
-            image: '/images/home-first.png',
+            image: `${prefix}images/home-first.png`,
             title: tPagesHomeList('list-item.title'),
             price: tPagesHomeList('list-item.price', { value: 120, currency: currency }),
           },
           {
             link: '/pu/home',
             id: '3',
-            image: '/images/home-first.png',
+            image: `${prefix}images/home-first.png`,
             title: tPagesHomeList('list-item.title'),
             price: tPagesHomeList('list-item.price', { value: 120, currency: currency }),
           },
           {
             link: '/pu/home',
             id: '4',
-            image: '/images/home-first.png',
+            image: `${prefix}images/home-first.png`,
             title: tPagesHomeList('list-item.title'),
             price: tPagesHomeList('list-item.price', { value: 120, currency: currency }),
           },
           {
             link: '/pu/home',
             id: '5',
-            image: '/images/home-first.png',
+            image: `${prefix}images/home-first.png`,
             title: tPagesHomeList('list-item.title'),
             price: tPagesHomeList('list-item.price', { value: 120, currency: currency }),
           },
           {
             link: '/pu/home',
             id: '6',
-            image: '/images/home-first.png',
+            image: `${prefix}images/home-first.png`,
             title: tPagesHomeList('list-item.title'),
             price: tPagesHomeList('list-item.price', { value: 120, currency: currency }),
           },
           {
             link: '/pu/home',
             id: '7',
-            image: '/images/home-first.png',
+            image: `${prefix}images/home-first.png`,
             title: tPagesHomeList('list-item.title'),
             price: tPagesHomeList('list-item.price', { value: 120, currency: currency }),
           },
           {
             link: '/pu/home',
             id: '8',
-            image: '/images/home-first.png',
+            image: `${prefix}images/home-first.png`,
             title: tPagesHomeList('list-item.title'),
             price: tPagesHomeList('list-item.price', { value: 120, currency: currency }),
           },

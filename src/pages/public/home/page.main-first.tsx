@@ -1,4 +1,5 @@
 import { StackLink } from '@local/components/stack-link';
+import { prefix } from '@local/consts';
 import { HomeMainDto } from '@local/core/dto';
 
 import { Image } from '@jenesei-software/jenesei-kit-react/component-image';
@@ -124,7 +125,7 @@ export const PagePublicHomeMainFirst: FC<HomeMainDto['first']> = (props) => {
             },
           }}
           alt='Arrow'
-          src='/images/home-arrow.png'
+          src={`${prefix}images/home-arrow.png`}
         />
       </StackLink>
       <Stack
